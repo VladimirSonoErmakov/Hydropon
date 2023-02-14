@@ -17,6 +17,8 @@ boolean VentilationOn =  false; // false  Флажок, включить ли в
 uint8_t FloodTime = 5;  // время (час суток) когда поднять флаг полива
 uint8_t LastHour = 0 ; // контроль времени прошлого цикла - изначально 0 часов
 uint8_t PresentHour = 0; // Текущее время - изначально 0 часов
+int Humidity = 0;
+int Temperature = 0;
 
 
 void printDateTime(const RtcDateTime& dt)
@@ -129,7 +131,10 @@ Serial.print(PresentHour);
 Serial.print(" UpperTankLevel: "); 
 Serial.print(digitalRead(4));
 Serial.println();
-
+//Serial.print("Pump: ");
+//Serial.print(PumpOn); 
+//Serial.print(" Water today: ");  
+//Serial.print(AllreadyWateredToday);
 
 
 
